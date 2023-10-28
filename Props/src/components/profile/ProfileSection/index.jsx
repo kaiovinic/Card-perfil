@@ -4,7 +4,9 @@ import style from "./style.module.css";
 const ProfileSection = (props) => {
   return (
     // eslint-disable-next-line react/prop-types
-    <div className={style.wrapper}>{props.children}</div>
+    <div {...props} className={`${style.wrapper} ${props.className}`}>
+      {props.children}
+    </div>
   );
 };
 
